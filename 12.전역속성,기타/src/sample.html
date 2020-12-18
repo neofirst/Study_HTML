@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* class */
+    .section{
+      width: 100px;
+      background-color: red;
+    }
+    /* id */
+    #section{
+      width: 100px;
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">11</div>
+  <div class="section">22</div>
+  <div class="section">33</div>
+  <div class="section">44</div>
+  <div class="section">55</div>
+  <div id="section">66</div>
+  <script>
+    const section = document.querySelector('.selection');
+    const sectionId = document.querySelector('.selection');
+  </script>
+  <h1 style="color: red; background-color: blue;">style</h1>
+  <h1 title="title" style="color: red; background-color: blue;">title</h1>
+  <br/>
+  <div id="a" data-name="tests"></div>
+  <script>
+    const test = document.getElementById('me');
+    console.log(a.dataset.name);
+  </script>
+  <br/>
+  <input type="text" value="1" tabindex="1">
+  <input type="text" value="2" tabindex="2">
+  <input type="text" value="3" tabindex="3">
+  <input type="text" value="4" tabindex="4">
+  <div tabindex="0">split div</div>
+  <input type="text" value="5">
+  <input type="text" value="6">
+  <input type="text" value="7" tabindex="-1">
+  <input type="text" value="8">
+</body>
+</html>

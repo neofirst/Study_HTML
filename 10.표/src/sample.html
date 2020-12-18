@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css//sample.css">
+</head>
+<body>
+  <!-- table th td caption -->
+  <table>
+    <caption>table th td caption</caption>
+    <tr>
+      <th colspan="2" id="th-data">Data</th>
+    </tr>
+    <tr>
+      <th abbr="Type" scope="col" headers="th-data">Winform</th>
+      <th abbr="Value" scope="col" headers="th-data">ASP.NET Core</th>
+    </tr>
+    <tr>
+      <td>React.js</td>
+      <td>Node.js</td>
+    </tr>
+    <tr>
+      <td>graphQL</td>
+      <td>TypeScript</td>
+    </tr>
+  </table>
+  <table>
+    <caption>table th td caption</caption>
+    <tr>
+      <th rowspan="2" id="th-data">데이터</th>
+      <th headers="th-data" id="th-type">타입</th>
+      <td headers="th-type">알파벳</td>
+      <td headers="th-type">숫자</td>
+    </tr>
+    <tr>
+      <th headers="th-data" id="th-value">value</th>
+      <td headers="th-value">N</td>
+      <td headers="th-value">1</td>
+    </tr>
+  </table>
+  <!-- col -->
+  <table>
+    <caption>colgroup, col</caption>
+    <col style="background-color: tomato;">
+    <col>
+    <col>
+    <tr>
+      <th></th>
+      <th>데이터</th>
+      <th>값</th>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>알파벳</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>숫자</td>
+      <td>7</td>
+    </tr>
+    <!-- colgroup-->
+  <table>
+    <caption>colgroup, col</caption>
+    <colgroup>
+      <!-- span 연속해서 계속 적용 -->
+      <col style="background-color: tomato;" span="2">
+      <col>
+    </colgroup>
+    <tr>
+      <th></th>
+      <th>데이터</th>
+      <th>값</th>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>알파벳</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>숫자</td>
+      <td>7</td>
+    </tr>
+  </table>
+</body>
+</html>

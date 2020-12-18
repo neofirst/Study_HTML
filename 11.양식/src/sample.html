@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- autocomplete 기존 입력 내용 저장 여부
+       novalidate control 유효성 검사 실행 금지 
+       _self 현재 페이지
+       _blank 새로운 탭 페이지 -->
+  <form action="/login" method="GET" autocomplete="off" novalidate target="_self" id="login-form">
+    <input type="email" name="id">
+    <input type="password" name="pw">
+    <input type="submit" value="로그인">
+    <!-- image submit -->
+    <input type="image" src="../images/KakaoTalk.png">
+    <input type="reset" value="초기화">
+    <button type="reset">초기화</button>
+  </form>
+  <!-- form에 종속 설정 -->
+  <input type="text" form="login-form">
+  <br />
+  <input type="text" autofocus>
+  <br />
+  <input type="email">
+  <input type="password">
+  <input type="submit" value="로그인">
+  <br />
+  <input type="number" value="1234" readonly>
+  <br />
+  <input type="number" value="1234" disabled>
+  <br />
+  <input type="number" placeholder="only number" max="8">
+  <br />
+  <input type="number" placeholder="only number" step="2">
+  <br />
+  <input type="checkbox">
+  <input type="checkbox" checked>
+  <br />
+  <input type="file">
+  <br />
+  <input type="file" multiple>
+  <br />
+  <input type="image" src="../images/KakaoTalk.png">
+  <br />
+  <input type="radio" name="raido">
+  <input type="radio" name="raido" checked>
+  <br />
+  <input type="checkbox" id="user-agreement" />
+  <label>동의하십니까?(not for)</label>
+  <input type="checkbox" id="user-agreement1" />
+  <label for="user-agreement1">동의하십니까?(for)</label>
+  <label><input type="checkbox" />동의하십니까?(input in label)</label>
+  <br />
+  <label>
+    검색<input type="search">
+  </label>
+  <br />
+  <button onclick="doit()">javascript call click</button>
+  <script>
+    function doit() {
+      alert('click');
+    }
+  </script>
+  <br />
+  <textarea rows="6"></textarea>
+  <br />
+  <!-- fieldset -->
+  <fieldset>
+    <legend>legend</legend>
+    <label><input type="radio" name="size" value="tall">tall</label>
+    <label><input type="radio" name="size" value="tall">grande</label>
+    <label><input type="radio" name="size" value="tall">venti</label>
+  </fieldset>
+  <br />
+  <progress value="0" max="100"></progress>
+  <!-- <progress value="70" max="100"></progress>
+  <progress value="0.7">70%</progress> -->
+  <script>
+    const progress = document.querySelector('progress');
+    const interval = setInterval(() => {
+      progress.value += 10;
+      if (progress.value >= 100) {
+        clearInterval(interval);
+      }
+    }, 1000)
+  </script>
+  <br />
+  <select name="opt" size="3" multiple>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+  </select>
+  <select name="opt" size="3" multiple disabled>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+  </select>
+  <br />
+  <select name="opt">
+    <optgroup label="1~3">
+      <option label="0" value="0">
+      <option label="1" value="1">1</option>
+      <option label="2" value="2" selected>2</option>
+      <option>3</option>
+    </optgroup>
+    <optgroup label="4~6">
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+    </optgroup>
+  </select>
+  <br />
+  <input list="lst">
+  <datalist id="lst">
+    <option>5123</option>
+    <option>61</option>
+    <option>742</option>
+  </datalist>
+</body>
+</html>

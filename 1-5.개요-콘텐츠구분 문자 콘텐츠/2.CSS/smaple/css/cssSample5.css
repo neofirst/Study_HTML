@@ -1,0 +1,14 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+div{
+  background: red;
+  width: 300px;
+  height: 200px;
+}
+span{
+  background: red;
+  width: 300px;
+  height: 200px;
+}
